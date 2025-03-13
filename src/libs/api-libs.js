@@ -1,7 +1,7 @@
 export const fetchApi = async (resource, params) => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/${resource}?${params}`
+      `${process.env.NEXT_PUBLIC_API_URL}api/${resource}?${params}`
     );
 
     if (!response.ok) {

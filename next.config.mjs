@@ -7,7 +7,10 @@ const nextConfig = {
   images: {
     remotePatterns: [
       { protocol: "http", hostname: "localhost" },
-      { protocol: "https", hostname: "real-estate.aimanyusuf.me" },
+      {
+        protocol: "https",
+        hostname: new URL(process.env.NEXT_PUBLIC_API_URL).hostname,
+      },
     ],
   },
 };
